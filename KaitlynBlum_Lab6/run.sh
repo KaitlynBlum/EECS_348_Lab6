@@ -34,35 +34,35 @@ echo "$input" | grep -oP '\b\w+\b' | wc -l
 
 # Question 4
 echo "Question 4:"
-grep -E '^EMAIL' Emails.txt
+grep -E '^EMAIL' Email.txt
 
 # Question 5
 echo "Question 5:"
-grep -E '^(COUNT|NEXT|READ)$' Emails.txt
+grep -E '^(COUNT|NEXT|READ)$' Email.txt
 
 # Question 6
 echo "Question 6:"
-grep -E '^EMAIL Boss,' Emails.txt
+grep -E '^EMAIL Boss,' Email.txt
 
 # Question 7
 echo "Question 7:"
-grep -E '^EMAIL .*,.*,[0-9]{2}-[0-9]{2}-2025$' Emails.txt
+grep -E '^EMAIL .*,.*,[0-9]{2}-[0-9]{2}-2025$' Email.txt
 
 # Question 8
 echo "Question 8:"
-grep -E '^EMAIL .*12-[0-9]{2}-2024$' Emails.txt
+grep -E '^EMAIL .*12-[0-9]{2}-2024$' Email.txt
 
 # Question 9
 echo "Question 9:"
-grep -E '^EMAIL [^,]+,Important,[0-9]{2}-[0-9]{2}-[0-9]{4}$' Emails.txt
+grep -E '^EMAIL [^,]+,Important,[0-9]{2}-[0-9]{2}-[0-9]{4}$' Email.txt
 
 # Question 10
 echo "Question 10:"
-grep -E '^EMAIL Boss,Re:.*,[0-9]{2}-[0-9]{2}-[0-9]{4}$' Emails.txt
+grep -E '^EMAIL Boss,Re:.*,[0-9]{2}-[0-9]{2}-[0-9]{4}$' Email.txt
 
 # Question 11
 echo "Question 11:"
-grep -E '^EMAIL [^,]*Person,' Emails.txt
+grep -E '^EMAIL [^,]*Person,' Email.txt
 
 # ========================================================
 # === Part 3: Advanced Regular Expression Combinations ===
@@ -70,16 +70,16 @@ grep -E '^EMAIL [^,]*Person,' Emails.txt
 
 # Question 12
 echo "Question 12:"
-grep -E '^EMAIL' Emails.txt | wc -l
+grep -E '^EMAIL' Email.txt | wc -l
 
 # Question 13
 echo "Question 13:"
-grep -E '^(COUNT|NEXT|READ)$' Emails.txt | tr '[:upper:]' '[:lower:]'
+grep -E '^(COUNT|NEXT|READ)$' Email.txt | tr '[:upper:]' '[:lower:]'
 
 # Question 14
 echo "Question 14:"
-grep -E '^EMAIL (ImportantPerson|OtherPerson),' Emails.txt | sed -E 's/(ImportantPerson|OtherPerson)/Others/'
+grep -E '^EMAIL (ImportantPerson|OtherPerson),' Email.txt | sed -E 's/(ImportantPerson|OtherPerson)/Others/'
 
 # Question 15
 echo "Question 15:"
-grep -E '^EMAIL' Emails.txt | awk -F',' '{print $2}'
+grep -E '^EMAIL' Email.txt | awk -F',' '{print $2}'
